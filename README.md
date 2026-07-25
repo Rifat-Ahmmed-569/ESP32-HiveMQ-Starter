@@ -188,6 +188,57 @@ stays untouched.
 
 ---
 
+
+Now you have your code in hand with your unique subscriber topic. Upload the code and check if wifi is connected or not. While wifi is connected the device should start sending data to MQTT Broker.
+
+<img width="1282" height="698" alt="Screenshot from 2026-07-26 02-51-41" src="https://github.com/user-attachments/assets/221384cb-4842-471c-b98d-dec168dd9d4a" />
+
+Now code is uploaded.
+
+Now we have to get into HiveMQ Broker websocket client page by clicking into this link - https://www.hivemq.com/demos/websocket-client/
+
+Connect with the broker:
+
+<img width="1920" height="1080" alt="IoT (1)" src="https://github.com/user-attachments/assets/03038033-30d4-45da-87b3-19e5d8a23ca7" />
+
+Hit subscriptions button:
+
+<img width="1920" height="1080" alt="IoT(2)" src="https://github.com/user-attachments/assets/a5041309-d5b9-4ba3-a3af-ce8fec94245e" />
+
+Subscribe to your topic: 
+
+<img width="1920" height="1080" alt="IoT (3)" src="https://github.com/user-attachments/assets/e243108b-bd96-4516-a3e2-acaf21013a22" />
+
+Now you should be able to see your data:
+
+<img width="1920" height="1080" alt="IoT (4)" src="https://github.com/user-attachments/assets/f6fdb8cb-9ce1-4b0a-892a-621ca3e75a5d" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Learning Path
 
 If you're new to this, work through the steps in order:
