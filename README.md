@@ -169,7 +169,7 @@ school/classroom/temp
 
 ---
 
-## Replacing `updateSensor()` with AI
+## Replacing `updateSensor()` you can also use AI for this. Claude Code is good at these
 
 The template includes a clearly marked block for this:
 
