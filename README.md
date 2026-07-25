@@ -218,6 +218,33 @@ Now you should be able to see your data:
 
 
 
+Congratulations! 
+
+
+
+
+Now you can use your broker information to build your custom website or data collection system architecture. Like there, I have built these two live websites
+
+
+<img width="1920" height="895" alt="Screenshot from 2026-07-26 01-53-30" src="https://github.com/user-attachments/assets/f1dcc3a5-b311-4b20-981a-c2860c641e00" />
+Website Link: https://v0-karigar-io-t-dashboard.vercel.app/
+
+
+<img width="1919" height="970" alt="Screenshot from 2026-07-26 03-02-07" src="https://github.com/user-attachments/assets/b3d2e355-d2a4-4d86-b39d-cc3f8ae45b22" />
+Website Link: https://drain-sense-website.vercel.app/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
