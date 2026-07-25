@@ -212,6 +212,10 @@ If you're new to this, work through the steps in order:
 
 ---
 
+<img width="1920" height="1080" alt="IoT" src="https://github.com/user-attachments/assets/f8fdd261-49ee-4aa6-84b6-da6387fa8d58" />
+
+---
+
 ## Examples
 
 Each folder in `examples/` is a complete sketch — the main template with
@@ -229,7 +233,7 @@ sensor.
 
 ---
 
-<img width="1920" height="1080" alt="IoT" src="https://github.com/user-attachments/assets/f8fdd261-49ee-4aa6-84b6-da6387fa8d58" />
+
 
 
 `architecture.png` and `flowchart.png` are placeholders for your own
