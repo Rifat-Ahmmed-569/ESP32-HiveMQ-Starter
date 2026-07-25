@@ -189,54 +189,104 @@ stays untouched.
 ---
 
 
-Now you have your code in hand with your unique subscriber topic. Upload the code and check if wifi is connected or not. While wifi is connected the device should start sending data to MQTT Broker.
+## Verifying Your Setup
 
-<img width="1282" height="698" alt="Screenshot from 2026-07-26 02-51-41" src="https://github.com/user-attachments/assets/221384cb-4842-471c-b98d-dec168dd9d4a" />
+Now that you have your code with your unique topic, let's confirm everything is working end to end.
 
-Now code is uploaded.
+### 1. Upload and Check the Wi-Fi Connection
 
-Now we have to get into HiveMQ Broker websocket client page by clicking into this link - https://www.hivemq.com/demos/websocket-client/
+Upload the sketch to your ESP32 and open the Serial Monitor. Confirm that the device connects to Wi-Fi successfully — once connected, it will automatically start publishing data to the HiveMQ broker.
 
-Connect with the broker:
+<img width="1282" height="698" alt="Serial monitor showing Wi-Fi connected" src="https://github.com/user-attachments/assets/221384cb-4842-471c-b98d-dec168dd9d4a" />
 
-<img width="1920" height="1080" alt="IoT (1)" src="https://github.com/user-attachments/assets/03038033-30d4-45da-87b3-19e5d8a23ca7" />
+Code uploaded and running.
 
-Hit subscriptions button:
+### 2. Open the HiveMQ WebSocket Client
 
-<img width="1920" height="1080" alt="IoT(2)" src="https://github.com/user-attachments/assets/a5041309-d5b9-4ba3-a3af-ce8fec94245e" />
+Go to HiveMQ's free browser-based MQTT client:
+👉 **[https://www.hivemq.com/demos/websocket-client/](https://www.hivemq.com/demos/websocket-client/)**
 
-Subscribe to your topic: 
+**Connect to the broker:**
 
-<img width="1920" height="1080" alt="IoT (3)" src="https://github.com/user-attachments/assets/e243108b-bd96-4516-a3e2-acaf21013a22" />
+<img width="1920" height="1080" alt="Connecting to the broker in HiveMQ WebSocket client" src="https://github.com/user-attachments/assets/03038033-30d4-45da-87b3-19e5d8a23ca7" />
 
-Now you should be able to see your data:
+**Open the Subscriptions panel:**
 
-<img width="1920" height="1080" alt="IoT (4)" src="https://github.com/user-attachments/assets/f6fdb8cb-9ce1-4b0a-892a-621ca3e75a5d" />
+<img width="1920" height="1080" alt="Opening the subscriptions panel" src="https://github.com/user-attachments/assets/a5041309-d5b9-4ba3-a3af-ce8fec94245e" />
+
+**Subscribe to your topic:**
+
+<img width="1920" height="1080" alt="Subscribing to your topic" src="https://github.com/user-attachments/assets/e243108b-bd96-4516-a3e2-acaf21013a22" />
+
+**You should now see your live data streaming in:**
+
+<img width="1920" height="1080" alt="Live data appearing in the client" src="https://github.com/user-attachments/assets/f6fdb8cb-9ce1-4b0a-892a-621ca3e75a5d" />
+
+---
+
+### 🎉 Congratulations!
+
+Your ESP32 is now publishing live data to HiveMQ, and you've confirmed it's arriving on your topic.
+
+---
+
+## What's Next: Build Your Own Dashboard
+
+With your broker and topic details in hand, you can build any custom website or data collection system on top of this. Here are two live examples built using this exact setup:
+
+<img width="1920" height="895" alt="Karigar IoT dashboard example" src="https://github.com/user-attachments/assets/f1dcc3a5-b311-4b20-981a-c2860c641e00" />
+
+**Live site:** [karigar-iot-dashboard](https://v0-karigar-io-t-dashboard.vercel.app/)
+
+<img width="1919" height="970" alt="DrainSense dashboard example" src="https://github.com/user-attachments/assets/b3d2e355-d2a4-4d86-b39d-cc3f8ae45b22" />
+
+**Live site:** [drain-sense-website](https://drain-sense-website.vercel.app/)
 
 
 
+Here's simple prompt for you to command prompt for Google AI Studio or Claude to make them buikd custom website for you:
 
+# AI Prompt: Build a Live Dashboard for This Data
 
+Copy the prompt below, fill in the 3 blanks with your own broker info
+(from the "2. HiveMQ Broker" section of your `.ino` file), and give it to
+any AI coding assistant.
 
-Congratulations! 
+---
 
+```
+Build a single-page dashboard that connects to an MQTT broker over
+WebSockets and shows live data as it arrives. Include a "Broker Info"
+section at the top displaying the broker host, port, and topic being
+used.
 
+Broker details:
+- Broker host: broker.hivemq.com
+- WebSocket port: 8884 (TLS) 
+- Topic: your/topic
 
+Requirements:
+- Use the MQTT.js library (from a CDN) to subscribe to the topic above.
+- Show a "Broker Info" panel with the host, port, and topic clearly visible.
+- Show the live value big and clear, updating in real time as messages arrive.
+- Add a simple line chart of the last 50 values (use Chart.js from a CDN).
+- Show a connection status indicator (Connected / Disconnected).
+- Keep it a single self-contained HTML file, no build step, no backend.
+```
 
-Now you can use your broker information to build your custom website or data collection system architecture. Like there, I have built these two live websites
+---
 
+### Notes for viewers
 
-<img width="1920" height="895" alt="Screenshot from 2026-07-26 01-53-30" src="https://github.com/user-attachments/assets/f1dcc3a5-b311-4b20-981a-c2860c641e00" />
-Website Link: https://v0-karigar-io-t-dashboard.vercel.app/
-
-
-<img width="1919" height="970" alt="Screenshot from 2026-07-26 03-02-07" src="https://github.com/user-attachments/assets/b3d2e355-d2a4-4d86-b39d-cc3f8ae45b22" />
-Website Link: https://drain-sense-website.vercel.app/
-
-
-
-
-
+- Replace `broker.hivemq.com`, `8884`, and `your/topic` with the exact
+  values from your own `.ino` file's "2. HiveMQ Broker" section.
+- Public HiveMQ (`broker.hivemq.com`) exposes MQTT over WebSockets on
+  port `8884` (TLS) or `8000` (non-TLS) — not the `1883` port your ESP32
+  uses, since that's plain MQTT, not WebSockets. Browsers can only speak
+  MQTT over WebSockets.
+- If you're using your own private HiveMQ Cloud cluster instead of the
+  public broker, use its WebSocket port and add your cluster's username/
+  password to the prompt.
 
 
 
