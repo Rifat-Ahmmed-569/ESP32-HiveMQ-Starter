@@ -229,7 +229,8 @@ sensor.
 
 ---
 
-<img width="2720" height="2000" alt="esp32_to_hivemq_flowchart" src="https://github.com/user-attachments/assets/119620bf-aab3-4afc-8c7b-7003e11426af" />
+<img width="1920" height="1080" alt="IoT" src="https://github.com/user-attachments/assets/f8fdd261-49ee-4aa6-84b6-da6387fa8d58" />
+
 
 `architecture.png` and `flowchart.png` are placeholders for your own
 diagrams (e.g. exported from draw.io or Excalidraw) if you'd like visuals
